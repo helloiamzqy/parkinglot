@@ -27,9 +27,4 @@ public class ParkLotTest {
         Assert.assertNotNull(pickedCar);
         Assert.assertEquals(pickedCar.getCarNum(),car.getCarNum());
     }
-    @Test
-    public void should_return_true_message_when_input_car(){
-        Car car = new Car();
-        car.setCarNum("粤C123123123");
-    }
 }

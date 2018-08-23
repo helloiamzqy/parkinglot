@@ -7,7 +7,7 @@ Then return false/true;
 
 #2.
 pick:
-Given a car .
+Given a carNum .
 When pick car.
 Then return car/null;
 
@@ -15,6 +15,10 @@ Then return car/null;
 park:
 Given a car
 When park car
-Then return false/true,parking lot message;
+Then return false/true;
 
-
+#4
+pick:
+Given a carNum
+When pick car
+Then return car

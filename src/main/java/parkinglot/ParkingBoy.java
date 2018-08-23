@@ -9,12 +9,8 @@ class ParkingBoy {
     private List<ParkLot> parkLots = new ArrayList<>();
     private Map<String,Integer> carLocation = new HashMap<>();
 
-    public void addParkLots(ParkLot parkLot){
+    void addParkLots(ParkLot parkLot){
         parkLots.add(parkLot);
-    }
-
-    public void setParkLots(List<ParkLot> parkLots) {
-        this.parkLots = parkLots;
     }
 
     boolean park(Car car) {
@@ -27,5 +23,15 @@ class ParkingBoy {
             }
         }
         return false;
+    }
+
+    Car pick(String carNum) {
+        if(carLocation.get(carNum)!=null){
+        int location=carLocation.get(carNum);
+            ParkLot parkLot= parkLots.get(location);
+            Car car=parkLot.pick(carNum);
+            return car;
+        }
+        return null;
     }
 }
