@@ -5,7 +5,7 @@ import java.util.Map;
 class ParkLot {
     private String parkName;
     private Map<String,Car> carMap = new HashMap<>();
-    private int maxCount =50;
+    private int carportCount =50;
 
     boolean park(Car car) {
         if(!isFull()){
@@ -24,8 +24,8 @@ class ParkLot {
         return null;
     }
 
-    public void setMaxCount(int maxCount) {
-        this.maxCount = maxCount;
+    public void setCarportCount(int carportCount) {
+        this.carportCount = carportCount;
     }
 
     public String getParkName() {
@@ -45,6 +45,6 @@ class ParkLot {
     }
 
     public boolean isFull(){
-        return carMap.size()>=maxCount;
+        return carMap.size()>= carportCount;
     }
 }

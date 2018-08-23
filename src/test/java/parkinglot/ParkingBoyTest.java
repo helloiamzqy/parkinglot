@@ -10,9 +10,15 @@ public class ParkingBoyTest {
         //Given
         Car car = new Car();
         car.setCarNum("粤C123123123");
+        ParkLot parkLot = new ParkLot();
+        parkLot.setCarportCount(1);
+        parkLot.park(new Car("粤C22233322"));
+        ParkLot parkLot1 = new ParkLot();
+        parkingBoy.addParkLots(parkLot);
+        parkingBoy.addParkLots(parkLot1);
         //When
         boolean flag = parkingBoy.park(car);
         //Then
-        Assert.assertTrue(flag);
+        Assert.assertEquals(car,parkLot1.getCarMap().get(car.getCarNum()));
     }
 }

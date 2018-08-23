@@ -11,5 +11,10 @@ class Car {
         this.carNum = carNum;
     }
 
+    public Car(String carNum) {
+        this.carNum = carNum;
+    }
 
+    public Car() {
+    }
 }
