@@ -13,11 +13,11 @@ public class ParkingBoyTest {
         ParkLot parkLot = new ParkLot();
         parkLot.setCarportCount(1);
         Car parkedCar = new Car("粤C3213213");
-        parkLot.park(parkedCar);
         ParkLot parkLot1 = new ParkLot();
         parkingBoy.addParkLots(parkLot);
         parkingBoy.addParkLots(parkLot1);
         //When
+        parkingBoy.park(parkedCar);
         parkingBoy.park(car);
         //Then
         Assert.assertEquals(parkedCar,parkLot.pick(parkedCar.getCarNum()));
