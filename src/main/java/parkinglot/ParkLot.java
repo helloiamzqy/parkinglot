@@ -3,7 +3,6 @@ package parkinglot;
 import java.util.HashMap;
 import java.util.Map;
 class ParkLot {
-    private String parkName;
     private Map<String,Car> carMap = new HashMap<>();
     private int carportCount =50;
 
@@ -24,27 +23,15 @@ class ParkLot {
         return null;
     }
 
-    public void setCarportCount(int carportCount) {
+    void setCarportCount(int carportCount) {
         this.carportCount = carportCount;
     }
 
-    public String getParkName() {
-        return parkName;
-    }
-
-    public void setParkName(String parkName) {
-        this.parkName = parkName;
-    }
-
-    public Map<String, Car> getCarMap() {
+    Map<String, Car> getCarMap() {
         return carMap;
     }
 
-    public void setCarMap(Map<String, Car> carMap) {
-        this.carMap = carMap;
-    }
-
-    public boolean isFull(){
+    boolean isFull(){
         return carMap.size()>= carportCount;
     }
 }
